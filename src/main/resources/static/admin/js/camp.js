@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:8080/camps';
+const apiUrl = 'https://bloodmate-production.up.railway.app/camps';
 let camps = [];
 
 const statesAndUTs = [

@@ -1,4 +1,4 @@
-const bannerApi = "http://localhost:8080/api/banners";
+const bannerApi = "https://bloodmate-production.up.railway.app/api/banners";
 
 // Replace with your Cloudinary credentials
 const cloudName = "video786";

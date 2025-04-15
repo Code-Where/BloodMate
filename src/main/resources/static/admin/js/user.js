@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:8080/users";
+const apiUrl = "https://bloodmate-production.up.railway.app/users";
 
 window.onload = () => fetchUsers();
 

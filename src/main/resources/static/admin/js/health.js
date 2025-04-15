@@ -1,4 +1,4 @@
-const healthUrl = "http://localhost:8080/health-info";
+const healthUrl = "https://bloodmate-production.up.railway.app/health-info";
 
 window.onload = () => fetchHealthInfo();
 

@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:8080/blood-requests";
+const baseUrl = "https://bloodmate-production.up.railway.app/blood-requests";
 
 function fetchRequests() {
   fetch(baseUrl)
