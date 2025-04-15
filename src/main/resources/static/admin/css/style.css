@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+:root {
+  --darkRed: rgb(137, 0, 0);
+  --white: #ffffff;
+  --black: #000000;
+  --editBtn: rgb(0, 95, 0);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+}
+
+.action-bar{
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar {
+  width: fit-content;
+  background: var(--darkRed);
+  color: var(--white);
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 5px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px auto;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--white);
+  display: block;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background: #a30000;
+  border-radius: 4px;
+}
+
+.logout-btn {
+  margin: 0 20px 10px;
+  padding: 10px;
+  background-color: #c0392b;
+  border: none;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #e74c3c;
+}
+
+.container {
+  min-height: 80vh;
+  max-width: 78vw;
+  margin: auto;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 8px 16px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn.delete {
+  background-color: #d32f2f;
+}
+
+table.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table.styled-table th,
+table.styled-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table.styled-table th {
+  background-color: var(--darkRed);
+  color: white;
+}
+
+.banner-thumb {
+  height: 60px;
+  border-radius: 4px;
+  object-fit: contain;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-updated {
+  padding: 12px 80px;
+  background-color: var(--darkRed);
+  border-radius: 15px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  margin: 10px 10px;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Blood Request Management</title>
+  <link rel="stylesheet" href="css/blood-request.css" />
+  <link rel="stylesheet" href="css/model.css">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo">🩸 BloodMate Admin</div>
+    <ul class="nav-links">
+      <li><a href="home.html">👤 Users</a></li>
+      <li><a href="userHealth.html">💊 Health Info</a></li>
+      <li><a href="bloodrequests.html">🩸 Blood Requests</a></li>
+      <li><a href="camp.html">🏕️ Camps</a></li>
+      <li><a href="banner.html">🖼️ Banners</a></li>
+    </ul><a href="/admin/logout" class="logout-btn">🚪 Logout</a>
+  </div>
+  
+  <div class="container">
+    <h1>Blood Request Management</h1>
+
+
+    <div class="action-bar">
+      <input type="text" id="requestSearchInput" placeholder="Search requests..." class="search-bar" />
+      <button class="btn btn-updated" onclick="openRequestModal()">New Request</button>
+    </div>
+
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Patient</th>
+          <th>Hospital</th>
+          <th>Required Blood Group</th>
+          <th>City</th>
+          <th>Urgency</th>
+          <th>Requester</th>
+          <th>Donor</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="requestTableBody"></tbody>
+    </table>
+  </div>
+  <!-- Modal -->
+  <div class="modal" id="requestModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeRequestModal()">&times;</span>
+      <h2>Create Blood Request</h2>
+      <form id="requestForm">
+        <input type="hidden" id="requestId">
+        <label>Patient Name:</label><input type="text" id="patientName" required>
+        <label>Hospital:</label><input type="text" id="hospitalName" required>
+        <label>Location:</label><input type="text" id="location" required>
+        <label>City:</label>
+        <select id="city" required>
+          <option value="">Select State or UT</option>
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+          <option value="Assam">Assam</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Chhattisgarh">Chhattisgarh</option>
+          <option value="Goa">Goa</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+          <option value="Jharkhand">Jharkhand</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Manipur">Manipur</option>
+          <option value="Meghalaya">Meghalaya</option>
+          <option value="Mizoram">Mizoram</option>
+          <option value="Nagaland">Nagaland</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Sikkim">Sikkim</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Telangana">Telangana</option>
+          <option value="Tripura">Tripura</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Uttarakhand">Uttarakhand</option>
+          <option value="West Bengal">West Bengal</option>
+          <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+          <option value="Chandigarh">Chandigarh</option>
+          <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+          <option value="Ladakh">Ladakh</option>
+          <option value="Lakshadweep">Lakshadweep</option>
+          <option value="Puducherry">Puducherry</option>
+        </select>
+        <label>Required Blood Group:</label>
+        <select id="bloodGroup" required>
+          <option value="">Select blood group</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+        </select>
+
+        <label>Urgency:</label><input type="text" id="urgencyLevel" required>
+        <label>Note:</label><input type="text" id="note">
+        <label>Deadline:</label><input type="date" id="deadline" required>
+        <label>Requester ID:</label><input type="number" id="requesterId" required>
+        <button type="submit" class="btn">Create</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/blood-request.js"></script>
+</body>
+
+</html>

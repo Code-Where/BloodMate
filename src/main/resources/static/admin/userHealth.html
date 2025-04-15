@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Health Info</title>
+  
+  <link rel="stylesheet" href="css/health.css">
+  <link rel="stylesheet" href="css/model.css"/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">🩸 BloodMate Admin</div>
+    <ul class="nav-links">
+      <li><a href="home.html">👤 Users</a></li>
+      <li><a href="userHealth.html">💊 Health Info</a></li>
+      <li><a href="bloodrequests.html">🩸 Blood Requests</a></li>
+      <li><a href="camp.html">🏕️ Camps</a></li>
+      <li><a href="banner.html">🖼️ Banners</a></li>
+    </ul><a href="/admin/logout" class="logout-btn">🚪 Logout</a>
+  </div>
+  
+  <div class="container">
+    <h1>User Health Info</h1>
+    <div class="action-bar">
+      <input type="text" id="healthSearchInput" placeholder="Search by user ID, name or email..." class="search-bar" />
+    </div>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>User</th>
+          <th>Weight</th>
+          <th>Diabetes</th>
+          <th>Hypertension</th>
+          <th>Asthma</th>
+          <th>Thyroid</th>
+          <th>Heart</th>
+          <th>Surgery</th>
+          <th>Willing</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="healthTableBody"></tbody>
+    </table>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="healthModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeHealthModal()">&times;</span>
+      <h2>Edit Health Info</h2>
+      <form id="healthForm">
+        <input type="hidden" id="editHealthUserId">
+        <input type="hidden" id="editHealthId">
+        <label>Weight:</label><input type="number" id="editHealthWeight" required>
+
+        <label>Diabetes:</label>
+        <select id="editHealthDiabetes">
+          <option value="false">No</option><option value="true">Yes</option>
+        </select>
+
+        <label>Hypertension:</label>
+        <select id="editHealthHypertension">
+          <option value="false">No</option><option value="true">Yes</option>
+        </select>
+
+        <label>Asthma:</label>
+        <select id="editHealthAsthma">
+          <option value="false">No</option><option value="true">Yes</option>
+        </select>
+
+        <label>Thyroid:</label>
+        <select id="editHealthThyroid">
+          <option value="false">No</option><option value="true">Yes</option>
+        </select>
+
+        <label>Heart:</label>
+        <select id="editHealthHeart">
+          <option value="false">No</option><option value="true">Yes</option>
+        </select>
+
+        <label>Surgery:</label>
+        <select id="editHealthSurgery">
+          <option value="false">No</option><option value="true">Yes</option>
+        </select>
+
+        <label>Willing to Donate:</label>
+        <select id="editHealthWilling">
+          <option value="true">Yes</option><option value="false">No</option>
+        </select>
+
+        <button class="btn" type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/health.js"></script>
+</body>
+</html>

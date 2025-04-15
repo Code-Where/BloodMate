@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Management</title>
+    <link rel="stylesheet" href="css/camp.css">
+    <link rel="stylesheet" href="css/model.css" />
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">🩸 BloodMate Admin</div>
+        <ul class="nav-links">
+          <li><a href="home.html">👤 Users</a></li>
+          <li><a href="userHealth.html">💊 Health Info</a></li>
+          <li><a href="bloodrequests.html">🩸 Blood Requests</a></li>
+          <li><a href="camp.html">🏕️ Camps</a></li>
+          <li><a href="banner.html">🖼️ Banners</a></li>
+        </ul><a href="/admin/logout" class="logout-btn">🚪 Logout</a>
+      </div>
+      
+    <div class="container">
+        <!-- Trigger Button -->
+
+        <!-- Modal -->
+        <div class="modal" id="campModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeCampModal()">&times;</span>
+                <h2 id="modalTitle">Create or Edit Camp</h2>
+                <form id="createCampForm" onsubmit="createOrUpdateCamp(event)">
+                    <input type="hidden" id="campId">
+
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" required>
+
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" required>
+
+                    <label for="state">State/UT:</label>
+                    <select id="state" required>
+                        <option value="">Select State/UT</option>
+                        <!-- dynamically populated in JS -->
+                    </select>
+
+                    <label for="organizerBy">Organizer:</label>
+                    <input type="text" id="organizerBy" required>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+
+                    <button type="submit" class="btn">Create / Update Camp</button>
+                </form>
+            </div>
+        </div>
+        <button class="btn btn-updated" onclick="openCampModal()">Create New Camp</button>
+
+        <!-- Search Bar (with dynamic filtering) -->
+        <div class="search-container">
+            <input type="text" id="searchTitle" placeholder="Search by title" class="search-bar">
+            <input type="text" id="searchLocation" placeholder="Search by location" class="search-bar">
+            <select id="searchState" class="search-bar">
+                <option value="">Search by State/UT</option>
+                <!-- Dynamically populated states -->
+            </select>
+            <input type="text" id="searchOrganizer" placeholder="Search by organizer" class="search-bar">
+            <button class="btn" onclick="filterCamps()">Search</button>
+        </div>
+
+        <!-- Camp List Table -->
+        <table id="campTable" class="styled-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Location</th>
+                    <th>State/UT</th>
+                    <th>Organizer</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic camp rows will appear here -->
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <script src="js/camp.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Management</title>
+  <link rel="stylesheet" href="css/user.css" />
+  <link rel="stylesheet" href="css/model.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo">🩸 BloodMate Admin</div>
+    <ul class="nav-links">
+      <li><a href="home.html">👤 Users</a></li>
+      <li><a href="userHealth.html">💊 Health Info</a></li>
+      <li><a href="bloodrequests.html">🩸 Blood Requests</a></li>
+      <li><a href="camp.html">🏕️ Camps</a></li>
+      <li><a href="banner.html">🖼️ Banners</a></li>
+    </ul><a href="/admin/logout" class="logout-btn">🚪 Logout</a>
+  </div>
+  <!-- Sidebar -->
+  <div class="container">
+    
+
+      <h1>User Management</h1>
+      <div class="action-bar">
+        <input type="text" id="searchInput" placeholder="Search users..." class="search-bar" />
+        <button id="addUserBtn" class="btn btn-updated">Add User</button>
+      </div>
+
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Password</th>
+            <th>Blood Group</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Last Donation</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody"></tbody>
+      </table>
+    </div>
+  <!-- User Modal -->
+  <div id="userModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeUserModal()">&times;</span>
+      <h2 id="modalTitle">Add / Edit User</h2>
+      <form id="userForm">
+        <input type="hidden" id="userId">
+        <label>Name:</label><input type="text" id="userName" required>
+        <label>Email:</label><input type="email" id="userEmail">
+        <label>Phone:</label><input type="text" id="userPhone" required>
+        <label>Password:</label><input type="text" id="userPassword" required>
+
+        <label>Blood Group:</label>
+        <select id="userBloodGroup" required>
+          <option value="">Select</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+
+        <label>Gender:</label>
+        <select id="userGender" required>
+          <option value="">Select</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="O">Other</option>
+        </select>
+
+        <label>DOB:</label><input type="date" id="userDob" required>
+        <label>Last Donation:</label><input type="date" id="userLastDonation">
+        <button type="submit" class="btn">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/user.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Banner Management</title>
+  <link rel="stylesheet" href="css/banner.css">
+  <link rel="stylesheet" href="css/model.css">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">🩸 BloodMate Admin</div>
+        <ul class="nav-links">
+          <li><a href="home.html">👤 Users Management</a></li>
+          <li><a href="userHealth.html">💊 Health Info Management</a></li>
+          <li><a href="bloodrequests.html">🩸 Blood Requests Management</a></li>
+          <li><a href="camp.html">🏕️ Camps Management</a></li>
+          <li><a href="banner.html">🖼️ Banners Management</a></li>
+        </ul><a href="/admin/logout" class="logout-btn">🚪 Logout</a>
+      </div>
+  <div class="container">
+    
+      
+    <h1>🖼️ Banner Management</h1>
+
+    <div class="upload-section">
+      <input type="file" id="bannerInput" accept="image/*" class="search-bar">
+      <button onclick="uploadBanner()" class="btn btn-updated">Upload Banner</button>
+    </div>
+
+    <div class="table-container">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Preview</th>
+              <th>URL</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="bannerTableBody">
+            <!-- Banner rows will load here -->
+          </tbody>
+        </table>
+      </div>
+      
+  </div>
+
+  <script src="js/banner.js"></script>
+</body>
+</html>
