@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/requestContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottomrounded"
+        android:backgroundTint="@color/white"
+        android:elevation="6dp"
+        android:padding="6dp">
+    <TextView
+        android:id="@+id/tv_requester_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Requester Name"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_request_date"
+        app:layout_constraintStart_toStartOf="@+id/tv_blood_type"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_blood_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rounded"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:text="Type : O+"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_requester_name" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rounded"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:text="Location: New York"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_request_date"
+            app:layout_constraintTop_toBottomOf="@id/tv_requester_name" />
+
+        <TextView
+            android:id="@+id/tv_request_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rounded"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:text="Requested on: 2024-03-27"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/viewRequestBtn"
+            app:layout_constraintStart_toEndOf="@+id/tv_emergency_type"
+            app:layout_constraintTop_toBottomOf="@id/tv_blood_type" />
+
+    <ImageView
+        android:id="@+id/viewRequestBtn"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded"
+        android:backgroundTint="@color/blood"
+        android:padding="5dp"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_emergency_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rounded"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:text="Urgent"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_blood_type" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Accept The Request"
+            android:paddingVertical="3dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/bottomrounded"
+            android:textAlignment="center"/>
+</LinearLayout>
+

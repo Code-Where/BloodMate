@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "634445651274",
+    "project_id": "bloodmate-d3f54",
+    "storage_bucket": "bloodmate-d3f54.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634445651274:android:91541c2bb3c0f0c61875b3",
+        "android_client_info": {
+          "package_name": "com.asdeveloper.bloodmate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS6lUOAE-Pbwc0Hwg7M1zS2C0Usjb7T_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

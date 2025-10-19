@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BloodMate" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/blood</item>
+        <item name="colorPrimaryDark">@color/blood</item>
+        <item name="android:statusBarColor">@color/blood</item>
+        <item name="android:navigationBarColor">@color/blood</item>
+    </style>
+
+    <style name="Theme.BloodMate" parent="Base.Theme.BloodMate" />
+    <style name="CalendarDateStyle">
+        <item name="android:background">@drawable/selctioncolor</item>
+        <item name="android:textColor">@color/blood</item> <!-- Change text color -->
+    </style>
+</resources>
